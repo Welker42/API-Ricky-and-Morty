@@ -1,0 +1,96 @@
+/* styles.css */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f5f5f5;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  background-color: #f1f1f1;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 20px;
+}
+
+.tabs button {
+  background-color: inherit;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+  border-bottom: 2px solid transparent;
+}
+
+.tabs button:hover {
+  background-color: #ddd;
+}
+
+.tabs button.active {
+  background-color: #fff;
+  border-bottom: 2px solid #2196F3;
+}
+
+.tabcontent {
+  display: none;
+  padding: 20px;
+  width: 80%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  padding: 15px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.card img {
+  border-radius: 8px;
+  max-width: 100%;
+  height: auto;
+}
+
+.card h3 {
+  margin: 10px 0;
+}
+
+.card p {
+  margin: 5px 0;
+}
+
+.residents, .characters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.resident, .character {
+  margin: 10px;
+  text-align: center;
+}
+
+.resident img, .character img {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.location-image {
+  max-width: 100%;
+  height: auto;
+}
