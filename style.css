@@ -1,0 +1,15 @@
+body {
+    font-family: Arial, sans-serif;
+}
+.character {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    display: inline-block;
+    width: 200px;
+}
+.character img {
+    width: 100%;
+    border-radius: 5px;
+}

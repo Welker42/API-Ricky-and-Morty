@@ -1,0 +1,50 @@
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rick and Morty API</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .character {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 5px;
+            display: inline-block;
+            width: 200px;
+        }
+        .character img {
+            width: 100%;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Personagens de Rick and Morty</h1>
+    <div id="characters"></div>
+
+    <script>
+        async function fetchCharacters() {
+            try {
+                const response = await fetch('https://rickandmortyapi.com/api/character/');
+                const data = await response.json();
+                const charactersContainer = document.getElementById('characters');
+                charactersContainer.innerHTML = data.results.map(character => `
+                    <div class="character">
+                        <img src="${character.image}" alt="${character.name}">
+                        <h2>${character.name}</h2>
+                        <p>Status: ${character.status}</p>
+                        <p>Espécie: ${character.species}</p>
+                    </div>
+                `).join('');
+            } catch (error) {
+                console.error('Erro ao buscar personagens:', error);
+            }
+        }
+
+        fetchCharacters();
+    </script>
+</body>
+</html>
